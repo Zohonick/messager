@@ -1,10 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:messenger/entity/default_persons_data.dart';
 import 'package:messenger/entity/persons_data.dart';
-import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'main_event.dart';
@@ -28,10 +27,4 @@ class MainBloc extends Bloc<MainEvent, MainState> {
 
     data = PersonsData.fromJson(jsonDecode(json));
   }
-
-  // Future<void> saveMessage(String message) async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final json = jsonEncode(messages);
-  //   await prefs.setString(_key, json);
-  // }
 }

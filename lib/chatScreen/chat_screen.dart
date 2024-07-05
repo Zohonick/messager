@@ -35,6 +35,7 @@ class ChatScreen extends StatelessWidget {
   Scaffold buildScaffold(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: Column(
           children: [
             HeaderView(data.persons?[index].name ?? ''),
@@ -45,6 +46,7 @@ class ChatScreen extends StatelessWidget {
               index: index,
               rootContext: context,
             ),
+            const SizedBox(height: 20),
           ],
         ),
       ),
